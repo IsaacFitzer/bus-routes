@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/routes" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Start:</label>
+    <select name="start">
+        <option value="Stop1">Stop1</option>
+        <option value="Stop2">Stop2</option>
+        <option value="Stop3">Stop3</option>
+        <option value="Stop4">Stop4</option>
+        <option value="Stop5">Stop5</option>
+        <option value="Stop6">Stop6</option>
+    </select>
+    <label>Stop:</label>
+    <select name="stop">
+        <option value="Stop1">Stop1</option>
+        <option value="Stop2">Stop2</option>
+        <option value="Stop3">Stop3</option>
+        <option value="Stop4">Stop4</option>
+        <option value="Stop5">Stop5</option>
+        <option value="Stop6">Stop6</option>
+    </select>
+    <input type="submit" value="Add Route">
+</form>
+
+<%- include('../partials/footer') %>

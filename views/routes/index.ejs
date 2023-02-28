@@ -1,5 +1,22 @@
 <%- include('../partials/header') %>
 
-<div>Routes go here</div>
+<table id="list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Start</th>
+            <th>Stop</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% routes.forEach(function(r) { %>
+            <tr>
+                <td><%= r.name %></td>
+                <td><%= r.start %></td>
+                <td><%= r.stop %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
 
 <%- include('../partials/footer') %>
