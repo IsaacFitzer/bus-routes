@@ -8,6 +8,15 @@
 </head>
 <body>
     <main>
-        <a href="/routes">View All Routes</a>
-        <a href="/routes/new">Create New Route</a>
+        <nav>
+            <a href="/routes" <%- title === 'All Routes' ? 'class="active"' : '' %>>All Routes</a>
+            <% if (user) { %>
+              <a href="/tickets" <%- title === 'All Tickets' ? 'class="active"' : '' %>>All Tickets</a>
+              <a href="/routes/new"	<%- title === 'Add Route' ? 'class="active"' : '' %>>Add Route</a>
+              <a href="/tickets/new"	<%- title === 'Buy Ticket' ? 'class="active"' : '' %>>Buy Ticket</a>
+              <a href="/logout">Log Out</a>
+            <% } else { %>
+              <a href="/auth/google" class="login">Log In</a>
+            <% } %>
+        </nav>
         <h1><%= title %></h1>

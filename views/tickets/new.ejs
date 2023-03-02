@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/tickets" method="POST">
+    <label>Route:</label>
+    <select name="route">
+        <% routes.forEach(function(r) { %>
+            <option value="<%= r.name %>"><%= r.name %></option>
+        <% }) %>
+    </select>
+    <label>Price:</label>
+    <select name="price">
+        <option default value="4">$4</option>
+    </select>
+    <input type="text" name="user" value="<%= user.email %>" hidden>
+    <input type="submit" value="Buy Ticket">
+</form>
+
+<%- include('../partials/footer') %>
