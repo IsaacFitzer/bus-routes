@@ -4,9 +4,9 @@ A website to buy bus tickets
 # Screenshots
 
 <img src="public/images/routes.png">
-<img src="images/addRoute.png">
-<img src="/public/images/myTickets.png">
-<img src="/images/buyTicket.png">
+<img src="public/images/addRoute.png">
+<img src="public/images/myTickets.png">
+<img src="public/images/buyTicket.png">
 
 # Technologies Used
 
