@@ -6,6 +6,7 @@
             <th>Name</th>
             <th>Start</th>
             <th>Stop</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +15,13 @@
                 <td><%= r.name %></td>
                 <td><%= r.start %></td>
                 <td><%= r.stop %></td>
+                <td>
+                <% if (user && user.email === 'fitzerisaac@gmail.com') { %>
+                    <form action="/routes/<%= r.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete Route</button>
+                    </form>
+                <% } %>
+                </td>
             </tr>
         <% }) %>
     </tbody>

@@ -3,7 +3,8 @@ const Route = require('../models/route')
 module.exports = {
     index,
     new: newRoute,
-    create
+    create,
+    delete: deleteRoute
 }
 
 function index(req, res) {
@@ -25,4 +26,9 @@ function create(req, res) {
         console.log(route)
         res.redirect('/routes')
     })
+}
+
+function deleteRoute(req, res) {
+    Route.deleteOne({_id: req.params.id})
+        .then(() => res.redirect('/routes'))
 }

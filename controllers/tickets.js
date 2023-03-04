@@ -8,14 +8,14 @@ module.exports = {
 }
 
 function index(req, res) {
-    Ticket.find({user: 'fitzerisaac@gmail.com'}).then(function(tickets) {
-        res.render('tickets/index', { title: 'All Tickets', tickets })
+    Ticket.find({owner: req.user.email}).then(function(tickets) {
+        res.render('tickets/index', { title: 'My Tickets', tickets })
     })
 }
 
 function newTicket(req, res) {
     Route.find({}).then(function(routes) {
-        res.render('tickets/new', { title: 'Add Ticket', routes })
+        res.render('tickets/new', { title: 'Buy Ticket', routes })
     })
 }
 
